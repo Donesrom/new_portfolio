@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+   <!-- home
+   ================================================== -->
+   
+	<section id="home">
+		<div class="overlay"></div><div class="gradient-overlay"></div>
+
+		<div class="home-content-table" >		   
+
+			<div class="home-content-tablecell">
+				<div class="row">
+					<div class="col-twelve">		   			
+							<div class="home-bottom-text">
+								<h3 class="animate-intro">Hello,</h3>
+								<h1 class="animate-intro">
+									I am Don Esrom, <br>
+									Software Developer.<br>	
+								</h1>	
+								<ul class="home-section-links">
+									<li class="animate-intro">More <a href="#about" class="smoothscroll">About Me</a></li>
+									<li class="animate-intro">View <a href="#portfolio" class="smoothscroll">My Works</a></li>
+									<li class="animate-intro">Contact <a href="#contact" class="smoothscroll">By Email</a></li>	
+								</ul>
+							</div> <!-- end home-bottom-text -->
+					</div> <!-- end col-twelve --> 
+				</div> <!-- end row --> 
+			</div> <!-- end home-content-tablecell --> 		   
+		</div> <!-- end home-content-table -->
+			<a href="#about" class="scroll-icon smoothscroll">		
+			<span class="icon-DownArrow"></span>
+			</a>	
+   </section> <!-- end home -->
+
+
+   <!-- about
+   ================================================== -->
+	<section id="about">
+		<div class="about-profile-bg"></div>
+			<div class="about-wrap">
+				<div class="about-profile">
+					<div class="about-profile-bg"></div>
+
+						<div class="intro">
+							<h3 class="animate-this">About</h3>
+
+							{% for about in abouts %}
+							<h1 class="animate-this">{{about.Title}}.</h1>
+							<p class="lead animate-this">{{about.Description|safe}}</p>					
+						</div> 
+							{% endfor %}
+							<p>
+								<a href="contact" class="button full-width animate-this">Contact Me</a>
+								<a href="{% static 'PDF/Esrom Thinji-CV.pdf'%}" class="button button-primary full-width animate-this" target="_blank">Download CV</a>
+								<a href="https://github.com/Donesrom" class="button full-width animate-this" target="_blank">View My Github</a>
+							</p>  			
+			</div> <!-- end about-profile  -->
+
+			<div class="about-services">
+				<div class="intro">
+					<h3 class="animate-this">Services</h3>
+					<h1 class="animate-this">What I Do.</h1>
+					<p class="lead animate-this">Here are some fo the services I offer to my clients.</p>
+				</div>
+						
+				{% for service in services %} 
+				<ul class="services">
+					<li class="item-branding animate-this">
+						<div class="service-item">
+							<h4>{{service.Title}}</h4>
+							<p>{{service.Description}}.
+							</p>
+						</div>   					
+					</li>
+				{% endfor %}
+					</li>
+				</ul>   			
+			</div> <!-- end about-services  -->   		
+		</div> <!-- end about-wrap  -->
+	</section> <!-- end about -->
+
+   <!-- about
+   ================================================== -->
+	<section id="skills">
+		<div class="overlay"></div>
+		<div class="gradient-overlay"></div>
+		<div class="row wide">
+			<div class="col-skills">
+				<div class="section-intro">
+					<h3 class="animate-this">Skillset</h3>
+					<h1 class="animate-this">I've Got Some Skills.</h1>
+					<p class="animate-this">I am always looking to add new skills that will help me offer better services to my clients. Some of these skills include:</p>
+				</div>
+					<ul class="skill-bars">
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent90"><span>90%</span></div> {% endcomment %}
+						<strong>Python</strong>
+						</li>
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent85"><span>85%</span></div> {% endcomment %}
+						<strong>Django</strong>
+						</li>
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent70"><span>70%</span></div> {% endcomment %}
+						<strong>Postgres</strong>
+						</li>
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent95"><span>95%</span></div> {% endcomment %}
+						<strong>Wordpress</strong>
+						</li>
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent75"><span>75%</span></div> {% endcomment %}
+						<strong>Heroku</strong>
+						</li>   
+						<li class="animate-this" data-animate="fadeInRight">
+						{% comment %} <div class="progress percent90"><span>90%</span></div> {% endcomment %}
+						<strong>AWS</strong>
+						</li>   
+					</ul>	
+			</div> <!-- end col-six -->
+		</div> <!-- end row wide -->
+   </section> <!-- end skills -->
+
+	<!-- portfolio
+   ================================================== -->
+   <section id="portfolio">
+		<div class="row narrow section-intro with-bottom-sep">
+			<div class="col-twelve">
+				<h3 class="animate-this">Portfolio</h3>
+				<h1 class="animate-this">See My Latest Projects.</h1>  
+				<div class="col-sm-6 col-lg-4 mb-4"> 
+				{% for project in projects %}
+					<div class="card">
+						<div class="image col-lg-5""item-wrap animate-this"><img class="img-fluid" <img src={{project.image1.url}} alt="..."></div>
+							<div class="card-body">
+							<h5 class="card-title">{{project.Title}}</h5>
+							<p class="card-text">{{project.Subtitle}}</p>
+							</div>
+					</div>
+				{% endfor %}
+				</div>	
+			</div>
+		</div>
+	</section>  <!-- end portfolio -->
+</body>
+		<center>    				
+			<br>
+			<a href= "contact"><button type="button" class="btn btn-secondary" class= "animate this" target= "_blank">Contact Me</button>
+		</center>
+		
+
+</html>
+{% endblock %}
