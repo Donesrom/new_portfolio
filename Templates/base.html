@@ -29,6 +29,21 @@
    ================================================== -->
 	<script src="{% static 'js/modernizr.js' %}"></script>
 	<script src="{% static 'js/pace.min.js' %}"></script>
+	
+	<script>
+
+
+		tinymce.init({
+		selector: 'form-control', // change this value according to your HTML
+		plugins: 'lists advlist link'
+		menubar: 'insert',
+  		toolbar: 'link'
+		});
+
+
+
+
+	</script>
 
    <!-- favicons
 	================================================== -->

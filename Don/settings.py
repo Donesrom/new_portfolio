@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Portfolio',
+    'tinymce',
     'crispy_forms',
 
 ]
@@ -158,3 +159,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT= 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL= False
+
+
+TINYMCE_JS_URL = os.path.join(STATIC_URL, "tinymce/tinymce.min.js")
+TINYMCE_COMPRESSOR = False

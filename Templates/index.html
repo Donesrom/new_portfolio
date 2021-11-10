@@ -7,7 +7,8 @@
 {% block content %}
    <!-- home
    ================================================== -->
-   
+<html>
+<body>  
 	<section id="home">
 		<div class="overlay"></div><div class="gradient-overlay"></div>
 
@@ -51,7 +52,7 @@
 
 							{% for about in abouts %}
 							<h1 class="animate-this">{{about.Title}}.</h1>
-							<p class="lead animate-this">{{about.Description|safe}}</p>					
+							<p class="lead animate-this">{{about.Description|linebreaks}}</p>					
 						</div> 
 							{% endfor %}
 							<p>
@@ -73,7 +74,7 @@
 					<li class="item-branding animate-this">
 						<div class="service-item">
 							<h4>{{service.Title}}</h4>
-							<p>{{service.Description|safe}}.
+							<p>{{service.Description|linebreaks}}.
 							</p>
 						</div>   					
 					</li>
@@ -83,6 +84,9 @@
 			</div> <!-- end about-services  -->   		
 		</div> <!-- end about-wrap  -->
 	</section> <!-- end about -->
+
+
+
 
    <!-- about
    ================================================== -->
@@ -133,20 +137,89 @@
 			<div class="col-twelve">
 				<h3 class="animate-this">Portfolio</h3>
 				<h1 class="animate-this">See My Latest Projects.</h1>  
-				<div class="col-sm-6 col-lg-4 mb-4"> 
-				{% for project in projects %}
-					<div class="card">
-						<div class="image col-lg-5""item-wrap animate-this"><img class="img-fluid" <img src={{project.image1.url}} alt="..."></div>
-							<div class="card-body">
-							<h5 class="card-title">{{project.Title}}</h5>
-							<p class="card-text">{{project.Description}}</p>
-							</div>
-					</div>
-				{% endfor %}
-				</div>	
+				
 			</div>
 		</div>
+
+<!-- New Portfolio-->
+
+
+
+<!-- End Portfolio -->
+	<center>
+
+		<style>
+		table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 80%;
+		}
+
+		td, th {
+		border: 3px solid black;
+		text-align: left;
+		padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		background-color: #dddddd;
+		}
+		</style>
+
+		<table>
+		<tr>
+			<th>Project Name</th>
+			<th>Project Description/Requirements</th>
+			<th>Project Link</th>
+		</tr>
+		{% for project in projects %}
+
+		<tr>
+			<td>{{project.Title}}</td>
+			<td>{{project.Description|safe}}</td>
+			<td>{{project.Project_link|safe}}</td>
+		</tr>
+		{% endfor %}
+		
+		</table>
+
+	</center>
+
+
+{% comment %} 
+	<center>
+		<style>
+		table, th, td {
+		border:3px solid black;
+		}
+		</style>
+	{% for project in projects %}
+
+	<div>
+		<table style="width:80%">
+		<tr>
+			<th>Project Name</th>
+			<th>Project Description/Requirements</th>
+			<th>Project Link</th>
+		</tr>
+	
+		<tr>
+			<td>{{project.Title}}</td>
+			<td>{{project.Description|safe}}</td>
+			<td>{{project.Project_link|safe}}</td>
+		</tr>
+
+		</table>
+		{% endfor %}
+	</div>
+	
+	</center> {% endcomment %}
+						
+
 	</section>  <!-- end portfolio -->
+
+
+
 </body>
 		<center>    				
 			<br>
