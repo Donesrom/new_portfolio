@@ -66,7 +66,7 @@
 				<div class="intro">
 					<h3 class="animate-this">Services</h3>
 					<h1 class="animate-this">What I Do.</h1>
-					<p class="lead animate-this">Here are some fo the services I offer to my clients.</p>
+					<p class="lead animate-this">Here are some of the services I offer to my clients.</p>
 				</div>
 						
 				{% for service in services %} 
@@ -130,9 +130,11 @@
 		</div> <!-- end row wide -->
    </section> <!-- end skills -->
 
+
+
 	<!-- portfolio
    ================================================== -->
-   <section id="portfolio">
+    <section id="portfolio">
 		<div class="row narrow section-intro with-bottom-sep">
 			<div class="col-twelve">
 				<h3 class="animate-this">Portfolio</h3>
@@ -141,49 +143,159 @@
 			</div>
 		</div>
 
+
+
+
+
+
 <!-- New Portfolio-->
 
+<div class="row portfolio-content">
+	<div class="col-twelve">
+		<div id="folio-wrap" class="bricks-wrapper">					
+
+			<div class="brick folio-item">
+			<div class="item-wrap animate-this" data-src="{% static 'images/portfolio/wordpress.png' %}" data-sub-html="#01" > 	
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/wordpress.png' %}" alt="WordPress site">	                     
+				  <div class="item-text">
+					  <span class="folio-types">
+								WordPress Development 
+							 </span>
+							 <h3 class="folio-title">LQD Content</h3>	     					   
+						  </div>                                        
+			   </a>
+			   <a href="https://lqdcontent.co.uk/" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->
+				 
+				 <div id="01" class='hide'>
+					 <h4>Content WordPress Site</h4>
+					 <p>I made a WordPress Content site that sowcases some of my written content. <a href="https://lqdcontent.co.uk/">Details</a></p>
+				 </div>
+			 </div> <!-- end folio-item -->
+
+			 <div class="brick folio-item">
+			<div class="item-wrap animate-this" data-src="{% static 'images/portfolio/portfolio.png' %}" data-sub-html="#02"> 	
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/portfolio.png' %}" alt="Shutterbug">	                     
+				  <div class="item-text">
+					  <span class="folio-types">
+								Portfolio
+							 </span>
+							 <h3 class="folio-title">Portfolio</h3>  	     					   
+						  </div>                                        
+			   </a>
+			   <a href="https://donesrom.herokuapp.com" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->
+
+			<div id="02" class='hide'>
+					 <h4>Shutterbug</h4>
+					 <p>My Portfolio Website. <a href="https://donesrom.herokuapp.com/">Details</a></p>
+				 </div>	               
+			 </div> <!-- end folio-item -->
+{% comment "" %}
+			 <div class="brick folio-item">
+			<div class="item-wrap animate-this" data-src="{% static 'images/portfolio/skaterboy.jpg' %}" data-sub-html="#03" >   	
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/skaterboy.jpg' %}" alt="Explore">	                     
+				  <div class="item-text">	                     		     					    
+							 <span class="folio-types">
+								UI/UX Design
+							 </span>
+							 <h3 class="folio-title">Explore</h3>
+						  </div>                                        
+			   </a>
+			   <a href="https://www.behance.net/" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->	
+
+			<div id="03" class='hide'>
+					 <h4>Explore</h4>
+					 <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+				 </div>               
+			 </div> <!-- end folio-item -->
+
+			 <div class="brick folio-item">
+			<div class="item-wrap animate-this"  data-src="{% static 'images/portfolio/skaterboy.jpg' %}"  data-sub-html="#04" >
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/skaterboy.jpg' %}" alt="Minimalismo">	                     
+				  <div class="item-text">	     					    
+							 <span class="folio-types">
+								Web Design
+							 </span>
+							 <h3 class="folio-title">Minimalismo</h3>
+						  </div>                                        
+			   </a>
+			   <a href="https://www.behance.net/" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->
+
+			<div id="04" class='hide'>
+					 <h4>Minimalismo</h4>
+					 <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+				 </div>  	               
+			 </div> <!-- end folio-item -->
+
+			 <div class="brick folio-item">
+			<div class="item-wrap animate-this"  data-src="{% static 'images/portfolio/skaterboy.jpg' %}"  data-sub-html="#05" >  	
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/skaterboy.jpg' %}" alt="Bicycle">	                     
+				  <div class="item-text">	     					    
+							 <span class="folio-types">
+								Branding
+							 </span>
+							 <h3 class="folio-title">Bicycle</h3>
+						  </div>                                        
+			   </a>
+			   <a href="https://www.behance.net/" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->
+
+			<div id="05" class='hide'>
+					 <h4>Bicycle</h4>
+					 <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+				 </div>	               
+			 </div> <!-- end folio-item -->
+		
+			 <div class="brick folio-item">
+			<div class="item-wrap animate-this"  data-src="{% static 'images/portfolio/skaterboy.jpg' %}"  data-sub-html="#06">     	
+			   <a href="#" class="overlay">
+				   <img src="{% static 'images/portfolio/skaterboy.jpg' %}" alt="Salad">	                     
+				  <div class="item-text">	     					    
+							 <span class="folio-types">
+								Photography
+							 </span>
+							 <h3 class="folio-title">Salad</h3>
+						  </div>                                        
+			   </a>
+			   <a href="https://www.behance.net/" class='details-link' title="details">
+				   <i class="icon-UpRightArrow"></i>
+			   </a>
+			</div> <!-- end item-wrap -->
+
+			<div id="06" class='hide'>
+					 <h4>Salad</h4>
+					 <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+				 </div>	               
+			 </div> <!-- end folio-item -->   				
+
+		</div> <!-- end folio-wrap -->
+	</div> <!-- end twelve -->
+</div> <!-- end portfolio-content -->   	 {% endcomment %}
+
+
+
+</section>  <!-- end portfolio -->
 
 
 <!-- End Portfolio -->
-	<center>
-
-		<style>
-		table {
-		font-family: arial, sans-serif;
-		border-collapse: collapse;
-		width: 80%;
-		}
-
-		td, th {
-		border: 3px solid black;
-		text-align: left;
-		padding: 8px;
-		}
-
-		tr:nth-child(even) {
-		background-color: #dddddd;
-		}
-		</style>
-
-		<table>
-		<tr>
-			<th>Project Name</th>
-			<th>Project Description/Requirements</th>
-			<th>Project Link</th>
-		</tr>
-		{% for project in projects %}
-
-		<tr>
-			<td>{{project.Title}}</td>
-			<td>{{project.Description|safe}}</td>
-			<td>{{project.Project_link|safe}}</td>
-		</tr>
-		{% endfor %}
-		
-		</table>
-
-	</center>
 
 
 {% comment %} 
@@ -215,6 +327,7 @@
 	
 	</center> {% endcomment %}
 						
+
 
 	</section>  <!-- end portfolio -->
 
